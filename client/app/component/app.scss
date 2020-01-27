@@ -1,0 +1,13 @@
+$lightBgColor: rgb(95, 74, 74);
+$lightTextColor: #ffd;
+
+app-component {
+  height: 300px;
+  width: 300px;
+  background-color: $lightBgColor;
+  color: $lightTextColor;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
