@@ -1,5 +1,5 @@
 {
-  "name": "ng6-starter",
+  "name": "@paraboly/angularjs-es6-component-boilerplate",
   "version": "0.0.1",
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
   "main": "app.bundle.js",
@@ -61,15 +61,18 @@
     "webpack": "gulp webpack"
   },
   "keywords": [
+    "paraboly",
+    "freakycoder",
+    "schemesonic",
     "angular",
     "webpack",
     "es6"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
+    "url": "https://github.com/Paraboly/angularjs-es6-component-boilerplate"
   },
-  "author": "AngularClass",
+  "author": "Paraboly",
   "license": "Apache-2.0",
   "babel": {
     "plugins": [
