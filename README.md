@@ -1,38 +1,33 @@
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/1016365/9864650/93a5660a-5b00-11e5-8716-a0d538d12913.png" alt="ng6-starter" width="480px;" >
-  <!-- old img url: http://res.cloudinary.com/angularclass/image/upload/v1431802814/ng6_vrmd60.png -->
+  <img src="./assets/logo.png" alt="angularjs-es6-component-boilerplate" >
 </p>
-
-# NG6 [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](https://angularclass.com/slack-join) [![Join the chat at https://gitter.im/angularclass/NG6-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/NG6-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > The de facto starter repo for building scalable apps with [Angular](https://angularjs.org), [ES6](https://git.io/es6features), and [Webpack](http://webpack.github.io/)
 
-This repo serves as a minimal starter for those looking to get up-and-running with Angular and ES6, using [Gulp](http://gulpjs.com/) and [Webpack](http://webpack.github.io/) for the build process.
-**This seed is not a Yeoman generator.** It's a minimal starter with tasks for building the boilerplate. **These are its features**:
+This repo serves as a minimal **component** starter for those looking to get up-and-running with Angular and ES6, using [Gulp](http://gulpjs.com/) and [Webpack](http://webpack.github.io/) for the build process.
+**This seed is not a Yeoman generator.** It's a minimal **component** starter with tasks for building the boilerplate. **These are its features**:
 * The best practice in directory/file organization for Angular (allowing for infinite horizontal app scaling)
 * A ready-to-go build system for working with [ES6](https://git.io/es6features)
 * Tasks for generating additional boilerplate Angular components
 * A full testing system in place
 * [SASS](http://sass-lang.com/) support via node-sass
-
-**Check out the [JSPM version](https://github.com/angularclass/NG6-starter/tree/jspm)--an alternative to Webpack as an ES6 build system.**
-
-> If you're looking for a preliminary [Angular 2](https://angular.io/) build, please use the [angular2-webpack-starter](https://github.com/angularclass/angular2-webpack-starter).
 ___
 
 # Table of Contents
-* [Walkthrough](#walkthrough)
-    * [Build System](#build-system)
-    * [File Structure](#file-structure)
-    * [Testing Setup](#testing-setup)
-* [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Running the App](#running-the-app)
-        * [Gulp Tasks](#tasks)
-        * [Testing](#testing)
-		* [Generating Components](#generating-components)		
-* [Starter Kit Support and Questions](#starter-kit-support-and-questions)
+- [Table of Contents](#table-of-contents)
+- [Walkthrough](#walkthrough)
+  - [Build System](#build-system)
+  - [File Structure](#file-structure)
+  - [Testing Setup](#testing-setup)
+- [Getting Started](#getting-started)
+  - [Dependencies](#dependencies)
+  - [Installing](#installing)
+      - [OR](#or)
+  - [Running the App](#running-the-app)
+    - [Tasks](#tasks)
+    - [Testing](#testing)
+    - [Generating Components](#generating-components)
+- [Starter Kit Support and Questions](#starter-kit-support-and-questions)
 
 # Walkthrough
 ## Build System
@@ -53,7 +48,6 @@ NG6 uses NPM scripts, Gulp, and Webpack together for its build system. Yes, you 
 * Starting a development server (yes, Webpack can do this too)
 * Generating boilerplate for the Angular app
 
-**Check out the [JSPM version](https://github.com/angularclass/NG6-starter/tree/jspm)--an alternative to Webpack as an ES6 build system.**
 
 ## File Structure
 We use a componentized approach with NG6. This will be the eventual standard (and particularly helpful, if using 
@@ -64,24 +58,18 @@ footer). Also characteristic of a component is that it harnesses its own stylesh
 services, and specs. This encapsulation allows us the comfort of isolation and structural locality. Here's how it 
 looks:
 ```
-client
+lib
 ⋅⋅app/
 ⋅⋅⋅⋅app.js * app entry file
 ⋅⋅⋅⋅app.html * app template
-⋅⋅⋅⋅common/ * functionality pertinent to several components propagate into this directory
-⋅⋅⋅⋅components/ * where components live
-⋅⋅⋅⋅⋅⋅components.js * components entry file
-⋅⋅⋅⋅⋅⋅home/ * home component
-⋅⋅⋅⋅⋅⋅⋅⋅home.js * home entry file (routes, configurations, and declarations occur here)
-⋅⋅⋅⋅⋅⋅⋅⋅home.component.js * home "directive"
-⋅⋅⋅⋅⋅⋅⋅⋅home.controller.js * home controller
-⋅⋅⋅⋅⋅⋅⋅⋅home.scss * home styles
-⋅⋅⋅⋅⋅⋅⋅⋅home.html * home template
-⋅⋅⋅⋅⋅⋅⋅⋅home.spec.js * home specs (for entry, component, and controller)
+⋅⋅⋅⋅ app.component.js * main app component file
+⋅⋅⋅⋅ app.controller.js * generic app component controller file
+⋅⋅⋅⋅ app.module.js * main module for the component (Important one!)
+⋅⋅⋅⋅ app.scss * component's style file
 ```
 
 ## Testing Setup
-All tests are also written in ES6. We use Webpack to take care of the logistics of getting those files to run in the various browsers, just like with our client files. This is our testing stack:
+All tests are also written in ES6. We use Webpack to take care of the logistics of getting those files to run in the various browsers, just like with our lib files. This is our testing stack:
 * Karma
 * Webpack + Babel
 * Mocha
@@ -99,15 +87,25 @@ Tools needed to run this app:
 * `clone` your fork
 * `npm install` to install dependencies
 
+#### OR
+
+* Create a new repo
+* ### [Duplicate this repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository) 
+* `clone` your new repo
+* `npm install` to install dependencies
+
+
 ## Running the App
-NG6 uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `npm start` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
+This boilerplate uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `npm start` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
  
 ### Tasks
 Here's a list of available tasks:
 * `npm run build`
   * runs Webpack, which will transpile, concatenate, and compress (collectively, "bundle") all assets and modules into `dist/bundle.js`. It also prepares `index.html` to be used as application entry point, links assets and created dist version of our application.
+* `npm run build-serve`
+  * stars a http-server via `http-server`, serving the lib folder as static one.
 * `npm run serve`
-  * starts a dev server via `webpack-dev-server`, serving the client folder.
+  * starts a dev server via `webpack-dev-server`, serving the lib folder.
 * `npm run watch`
   * alias of `serve`
 * `npm start` (which is the default task that runs when typing `gulp` without providing an argument)
@@ -123,11 +121,6 @@ To run the tests, run `npm test`.
 Be sure to define your `*.spec.js` files within their corresponding component directory. You must name the spec file like so, `[name].spec.js`. If you don't want to use the `.spec.js` suffix, you must change the `regex` in `spec.bundle.js` to look for whatever file(s) you want.
 `Mocha` is the testing suite and `Chai` is the assertion library. If you would like to change this, see `karma.conf.js`.
 
-### Examples
-
-It's always easier to learn something if you have an examples. Here is a list of repos which based on this starter:
-
- - [TodoMVC Example App](https://github.com/AngularClass/NG6-todomvc-starter)
 
 ### Generating Components
 Following a consistent directory structure between components offers us the certainty of predictability. We can take advantage of this certainty by creating a gulp task to automate the "instantiation" of our components. The component boilerplate task generates this:
@@ -146,20 +139,18 @@ To generate a component, run `npm run component -- --name componentName`.
 
 The parameter following the `--name` flag is the name of the component to be created. Ensure that it is unique or it will overwrite the preexisting identically-named component.
 
-The component will be created, by default, inside `client/app/components`. To change this, apply the `--parent` flag, followed by a path relative to `client/app/components/`.
+The component will be created, by default, inside `lib/app/components`. To change this, apply the `--parent` flag, followed by a path relative to `lib/app/components/`.
 
-For example, running `npm run component -- --name signup --parent auth` will create a `signup` component at `client/app/components/auth/signup`.  
+For example, running `npm run component -- --name signup --parent auth` will create a `signup` component at `lib/app/components/auth/signup`.  
 
-Running `npm run component -- --name footer --parent ../common` creates a `footer` component at `client/app/common/footer`.  
+Running `npm run component -- --name footer --parent ../common` creates a `footer` component at `lib/app/common/footer`.  
 
 Because the argument to `--name` applies to the folder name **and** the actual component name, make sure to camelcase the component names.
 
 # Starter Kit Support and Questions
 > Contact us, anytime, regarding anything about this project.
 
-* [Gitter: angularclass/NG6-starter](https://gitter.im/angularclass/NG6-starter)
-* [Twitter: @PatrickJS__](https://twitter.com/PatrickJS__)
+* [Email: Kuray aka FreakyCoder](kuray.ogun@paraboly.com)
+* [Email: Haldun aka SchemeSonic](haldun.yildiz@paraboly.com)
 
 ___
-
-enjoy — **PatrickJS** 

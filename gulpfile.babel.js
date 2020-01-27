@@ -17,7 +17,7 @@ import webpackHotMiddleware from "webpack-hot-middleware";
 import colorsSupported from "supports-color";
 import historyApiFallback from "connect-history-api-fallback";
 
-let root = "client";
+let root = "lib";
 
 // helper method for resolving paths
 let resolveToApp = (glob = "") => {
