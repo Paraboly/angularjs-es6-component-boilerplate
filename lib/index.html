@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Paraboly AngularJS ES6 Component</title>
+  <title>Paraboly Sandbox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -17,19 +17,42 @@
   <base href="/" />
 </head>
 <style>
-  app-component {
-    height: 300px;
-    width: 300px;
-    background-color: #dfdfdf;
-    color: #333333;
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  paraboly-sandbox {
     display: flex;
+    background-color: #303237;
+    color: #dfdfdf;
+    font-family: monospace;
     text-align: center;
     justify-content: center;
-    align-items: center;
   }
 </style>
+<script>
+  /**
+ * @type AngularJS.Module
+ * @name paraboly.sandbox
+ * @description Sandbox for implementing, testing and publishing new AngularJS modules
+ * @author Paraboly
+ */
+  var ParabolySandboxModule = angular
+    .module("paraboly.sandbox", [])
+    .component("parabolySandbox", {
+      template: `<h1>Welcome to Paraboly AngularJS {{$ctrl.name}}</h1>`,
+      controller: function () {
+        this.name = "Sandbox";
+      },
+      controllerAs: "$ctrl"
+    }).name;
+</script>
 
-<body style="height: 100vh; width: 100vw" ng-app="paraboly.sandbox" ng-strict-di ng-cloak>
+<body ng-app="paraboly.sandbox" ng-strict-di ng-cloak>
   <paraboly-sandbox>
     Loading...
   </paraboly-sandbox>
