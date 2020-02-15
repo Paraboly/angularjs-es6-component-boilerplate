@@ -5,7 +5,9 @@
   "main": "app.bundle.js",
   "dependencies": {},
   "peerDependencies": {
-    "angular": "^1.7.8"
+    "angular": "^1.7.8",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",

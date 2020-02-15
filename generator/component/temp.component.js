@@ -1,11 +1,21 @@
-import template from './<%= name %>.html';
-import controller from './<%= name %>.controller';
-import './<%= name %>.scss';
+import template from "./<%= dashedName %>.html";
+import controller from "./<%= dashedName %>.controller";
+import "./<%= dashedName %>.scss";
+/**
+ * @type AngularJS Component
+ * @name <%= upCaseName %>Component
+ * @description <%= upCaseName %>Component
+ * @since <%= date %>
+ * @author Paraboly
+ */
 
-let <%= name %>Component = {
-  bindings: {},
-  template,
-  controller
+
+const <%= upCaseName %>Component = {
+	bindings: {},
+	template,
+	controller,
+	controllerAs: "$ctrl"
 };
 
-export default <%= name %>Component;
+export default <%= upCaseName %>Component;
+

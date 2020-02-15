@@ -1,6 +1,15 @@
+/**
+ * @type AngularJS.Controller
+ * @name <%= upCaseName %>Controller
+ * @description <%= upCaseName %>Controller implements <%= upCaseName %>Component features
+ * @since <%= date %>
+ * @author Paraboly
+ */
+let $ctrl;
 class <%= upCaseName %>Controller {
   constructor() {
-    this.name = '<%= name %>';
+    $ctrl = this;
+    $ctrl.name = "<%= name %>";
   }
 }
 
