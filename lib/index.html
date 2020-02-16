@@ -39,7 +39,7 @@
   <paraboly-sandbox-banner>
     Loading...
   </paraboly-sandbox-banner>
-  <example-component></example-component>
+  <!--<example></example>-->
 </body>
 <script>
   /**
@@ -49,7 +49,7 @@
  * @author Paraboly
  */
   var ParabolySandboxModule = angular
-    .module("paraboly.sandbox", [/*"ExampleComponent"*/])
+    .module("paraboly.sandbox", [/*"ExampleModule"*/])
     .component("parabolySandboxBanner", {
       template: `<h1>Welcome to Paraboly AngularJS {{$ctrl.name}}</h1>`,
       controller: function () {
