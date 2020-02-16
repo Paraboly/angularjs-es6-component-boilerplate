@@ -4,15 +4,16 @@ let root = "lib";
 
 // helper method for resolving paths
 let resolveToApp = (glob = "") => {
-  return path.join(root, "app", glob); // app/{glob}
+  return path.join(root, "", glob);
 };
 
 let resolveToComponents = (glob = "") => {
-  return path.join(root, "app/components", glob); // app/components/{glob}
+  return path.join(root, "", glob);
 };
 
 // map of all paths
 const paths = {
+  root,
   js: resolveToComponents("**/*!(.spec.js).js"), // exclude spec files
   scss: resolveToApp("**/*.scss"), // stylesheets
   html: [resolveToApp("**/*.html"), path.join(root, "index.html")],

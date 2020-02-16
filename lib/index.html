@@ -25,7 +25,7 @@
     padding: 0;
   }
 
-  paraboly-sandbox {
+  paraboly-sandbox-banner {
     display: flex;
     background-color: #303237;
     color: #dfdfdf;
@@ -34,6 +34,13 @@
     justify-content: center;
   }
 </style>
+
+<body ng-app="paraboly.sandbox" ng-strict-di ng-cloak>
+  <paraboly-sandbox-banner>
+    Loading...
+  </paraboly-sandbox-banner>
+  <example-component></example-component>
+</body>
 <script>
   /**
  * @type AngularJS.Module
@@ -42,8 +49,8 @@
  * @author Paraboly
  */
   var ParabolySandboxModule = angular
-    .module("paraboly.sandbox", [])
-    .component("parabolySandbox", {
+    .module("paraboly.sandbox", [/*"ExampleComponent"*/])
+    .component("parabolySandboxBanner", {
       template: `<h1>Welcome to Paraboly AngularJS {{$ctrl.name}}</h1>`,
       controller: function () {
         this.name = "Sandbox";
@@ -51,11 +58,5 @@
       controllerAs: "$ctrl"
     }).name;
 </script>
-
-<body ng-app="paraboly.sandbox" ng-strict-di ng-cloak>
-  <paraboly-sandbox>
-    Loading...
-  </paraboly-sandbox>
-</body>
 
 </html>

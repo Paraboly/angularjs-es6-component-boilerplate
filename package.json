@@ -2,7 +2,7 @@
   "name": "@paraboly/angularjs-es6-component-boilerplate",
   "version": "0.0.1",
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
-  "main": "app.bundle.js",
+  "main": "lib/index.js",
   "dependencies": {},
   "peerDependencies": {
     "angular": "^1.7.8",
@@ -50,7 +50,8 @@
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
-    "yargs": "^3.9.0"
+    "yargs": "^3.9.0",
+    "moment": "^2.24.0"
   },
   "scripts": {
     "build": "gulp webpack",

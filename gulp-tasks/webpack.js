@@ -1,6 +1,7 @@
 import webpack from "webpack";
 import gutil from "gulp-util";
 import colorsSupported from "supports-color";
+import paths from "../gulp-paths.const";
 
 export default function Webpack(cb) {
   const config = require("../webpack.dist.config");
