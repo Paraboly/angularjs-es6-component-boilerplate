@@ -2,7 +2,7 @@
   "name": "@paraboly/angularjs-es6-component-boilerplate",
   "version": "0.0.1",
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
-  "main": "lib/index.js",
+  "main": "dist/app.bundle.js",
   "dependencies": {},
   "peerDependencies": {
     "angular": "^1.7.8",

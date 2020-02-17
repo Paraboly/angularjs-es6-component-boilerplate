@@ -1,4 +1,3 @@
-import angular from "angular";
 import <%= upCaseName %>Component from "./<%= dashedName %>.component";
 
 /**
