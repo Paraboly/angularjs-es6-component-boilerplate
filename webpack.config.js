@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+require("dotenv").config();
 
 module.exports = {
   devtool: "source-map",
