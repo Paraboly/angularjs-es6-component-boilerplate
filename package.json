@@ -49,6 +49,9 @@
     "webpack-hot-middleware": "^2.6.0",
     "yargs": "^3.9.0"
   },
+  "peerDependencies": {
+    "angular": "^1.7.9"
+  },
   "scripts": {
     "build": "gulp webpack",
     "build-serve": "npx http-server ./dist",
