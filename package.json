@@ -7,7 +7,7 @@
   "peerDependencies": {
     "angular": "^1.7.8",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
@@ -51,7 +51,7 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
     "yargs": "^3.9.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "scripts": {
     "build": "gulp webpack",
